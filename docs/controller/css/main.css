@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+* {
+    width:  100%;
+    height: 100%;
+    margin: 0%;
+    color: #FFF;
+    background: #0000;
+    user-select: none;
+}
+body {
+    background: #000;
+}
+
+/* ================ Button ================ */
+#direction, #action {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-origin: center;
+}
+.btn {
+    position: absolute;
+    width:  40%;
+    height: 40%;
+    background: #DDD;
+    border-radius: 1000rem;
+}
+.btn:active {
+    background: #888;
+}
+#up    { top:    0; background: #D00; }
+#left  { left:   0; }
+#right { right:  0; }
+#down  { bottom: 0; }
+#a { top:    0; background: #0D0; }
+#b { left:   0; }
+#c { right:  0; }
+#d { bottom: 0; }
+
+/* ================ Connection ================ */
+#connect {
+    position: absolute;
+    width:  0;
+    height: 0;
+    transform-origin: center;
+}
+input {
+    transform: translate(-50%);
+    width: 20rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-bottom: #FFF solid 1px;
+    background-color: #222;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* ================ State ================ */
+#state {
+    display: block;
+    width:  auto;
+    height: auto;
+    padding: .4rem;
+    background: #222;
+    z-index: -1;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* ================ Rotate ================ */
+#rotate {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    width:  8rem;
+    height: 8rem;
+    transform: translate(-50%, -50%) rotate(90deg);
+    display: grid;
+    place-items: center;
+    border-radius: 1000rem;
+    background: #226;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+}
+#direction, #action {
+    width:  13rem;
+    height: 13rem;
+}
+#direction {
+    transform: rotate(90deg);
+    left: 1rem;
+    top: 1rem;
+}
+#action {
+    transform: rotate(90deg);
+    left: 1rem;
+    bottom: 1rem;
+}
+#connect {
+    top: 50%;
+    right: 1rem;
+    transform: rotate(90deg);
+}
+#state {
+    position: absolute;
+    top:   0rem;
+    right: 0rem;
+    transform-origin: left top;
+    transform: translate(100%) rotate(90deg);
+}
